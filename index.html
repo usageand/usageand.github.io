@@ -26,11 +26,6 @@
 		padding-left: 35%;
 	}
 	</style>
-</head>
-	<body onload="timeStart()">
-		<div class='toDayDiv' id='toDayDiv'></div>
-		<div class='timeDiv' id='timeDiv'></div>
-	</body>
 	<script>
 	function timeStart()
 	{
@@ -68,5 +63,15 @@
 		}
 		document.getElementById('toDayDiv').innerHTML = y + '-' + m + '-' + d;
 	}
+	window.onload = function(){
+	   setTimeout(function(){
+	       getTime();
+	   }, 10000);
+	};
 	</script>
+</head>
+	<body>
+		<div class='toDayDiv' id='toDayDiv'></div>
+		<div class='timeDiv' id='timeDiv'></div>
+	</body>
 </html>
